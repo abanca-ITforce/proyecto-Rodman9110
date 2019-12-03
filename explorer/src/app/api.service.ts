@@ -15,4 +15,9 @@ export class ApiService {
     const url = this.endPoint + this.format;
     return this.httpClient.get<any[]>(url).pipe(map(result => result[1]));
   }
+
+  getCountryById$(countryId) {
+    const url = this.endPoint + "/" + countryId + this.format;
+    return this.httpClient.get<any>(url).pipe(map(result => result[1][0]));
+  }
 }

@@ -10,3 +10,4 @@ ng add @angular/material
 ng g @angular/material:nav layout/nav-shell --export
 ng g c shared/countriesList --export
 ng g s api
+ng g c country/country-card
