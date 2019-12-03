@@ -6,6 +6,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { RouterModule } from "@angular/router";
 import { NavShellComponent } from "./nav-shell/nav-shell.component";
 
 @NgModule({
@@ -17,7 +18,8 @@ import { NavShellComponent } from "./nav-shell/nav-shell.component";
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    RouterModule
   ],
   exports: [NavShellComponent]
 })
