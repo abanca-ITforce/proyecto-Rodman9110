@@ -1,0 +1,11 @@
+
+<!-- <mat-nav-list>  
+    <a *ngFor="let country of countres; let i = index" mat-list-item (click)="getCountry( country )" >
+        {{ country.name}}</a>
+</mat-nav-list> -->
+
+<mat-nav-list>  
+    <a *ngFor="let country of countres; let i = index" mat-list-item [routerLink]="country.id" >
+        {{ country.name}}</a>
+</mat-nav-list>
+
