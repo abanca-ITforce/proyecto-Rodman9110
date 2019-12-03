@@ -8,3 +8,4 @@ ng g m regions --route=regions --module=app-routing.module.ts
 ng g m regions/region --route=:regionId --module=regions/regions-routing.module.ts
 ng add @angular/material
 ng g @angular/material:nav layout/nav-shell --export
+ng g c shared/countriesList --export
