@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-country-card',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./country-card.component.css']
 })
 export class CountryCardComponent implements OnInit {
-
+  @Input() country: any;
   constructor() { }
 
   ngOnInit() {
