@@ -7,9 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FiltersComponent implements OnInit {
   @Input() incomeLevel;
+  @Input() leadingType;
+  @Input() regions ;
+  c
+
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 }

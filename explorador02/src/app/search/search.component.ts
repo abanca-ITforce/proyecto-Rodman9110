@@ -10,10 +10,14 @@ import { Observable } from 'rxjs';
 export class SearchComponent implements OnInit {
 
   incomeLevel$: Observable<any[]>
+  leadingType$: Observable<any[]>
+  regions$: Observable<any[]>
   constructor(private serciceSearch: SearchService) { }
 
   ngOnInit() {
-    this.incomeLevel$ = this.serciceSearch.getSearchIncomeLevelOptions();
+    this.incomeLevel$ = this.serciceSearch.getSearchIncomeLevelOptions$();
+    this.leadingType$ = this.serciceSearch.getSearchLeadingType$();
+    this.regions$ = this.serciceSearch.getSearchRegions$();
     
   }
 

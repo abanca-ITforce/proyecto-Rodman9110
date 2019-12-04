@@ -9,6 +9,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { FiltersComponent } from './filters/filters.component';
 import { ResultComponent } from './result/result.component';
+import {MatCardModule} from '@angular/material/card';
+
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { ResultComponent } from './result/result.component';
     SharedModule,
     MatSelectModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCardModule
   
   ]
 })
