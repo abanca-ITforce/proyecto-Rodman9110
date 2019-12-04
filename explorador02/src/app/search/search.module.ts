@@ -3,19 +3,23 @@ import { CommonModule } from '@angular/common';
 
 import { SearchRoutingModule } from './search-routing.module';
 import { SearchComponent } from './search.component';
-import { MatFormFieldModule, MatFormFieldControl } from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { SharedModule } from '../shared/shared.module';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { FiltersComponent } from './filters/filters.component';
+import { ResultComponent } from './result/result.component';
 
 
 @NgModule({
-  declarations: [SearchComponent],
+  declarations: [SearchComponent, FiltersComponent, ResultComponent],
   imports: [
     CommonModule,
     SearchRoutingModule,
-    MatFormFieldModule,
     SharedModule,
-    MatSelectModule
+    MatSelectModule,
+    MatButtonModule,
+    MatFormFieldModule
   
   ]
 })

@@ -1,7 +1,6 @@
 <p>search works!</p>
 
-<div class="example-container">
-        <mat-select placeholder="Select">
-                <mat-option value="option">Option</mat-option>
-        </mat-select>
-</div>
+<app-filters
+[incomeLevel] = "incomeLevel$ | async "
+>
+</app-filters>

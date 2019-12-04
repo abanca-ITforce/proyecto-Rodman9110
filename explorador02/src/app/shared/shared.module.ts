@@ -4,6 +4,9 @@ import { CountriesListComponent } from './countries-list/countries-list.componen
 import {MatListModule} from '@angular/material/list';
 import { RouterModule } from '@angular/router';
 import { RegionsListComponent } from './regions-list/regions-list.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -12,7 +15,10 @@ import { RegionsListComponent } from './regions-list/regions-list.component';
   imports: [
     CommonModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatFormFieldModule
   ],
   exports: [CountriesListComponent, RegionsListComponent]
 })
