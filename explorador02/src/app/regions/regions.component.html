@@ -1,12 +1,13 @@
 
 <p>rrrr</p>
 
- <p>regions works!</p>
-<!-- <app-region
+<app-regions-list
+  *ngIf="regions$ | async as regions; else empty"
+  [regions]="regions"
+  >   
+</app-regions-list>
 
->
-</app-region> -->
 
 <ng-template #empty>
     Loading...
-  </ng-template>
+</ng-template>

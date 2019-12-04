@@ -6,6 +6,7 @@ import { RegionsComponent } from './regions.component';
 import { RegionComponent } from './region/region.component';
 import { RouterModule } from '@angular/router';
 import { RegionModule } from './region/region.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { RegionModule } from './region/region.module';
     CommonModule,
     RegionsRoutingModule,
     RegionModule,
+    SharedModule,
     RouterModule
   ]
 })

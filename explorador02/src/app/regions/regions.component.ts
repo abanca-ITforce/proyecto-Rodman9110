@@ -13,7 +13,7 @@ export class RegionsComponent implements OnInit {
   constructor(private regionsService: RegionsService) { }
 
   ngOnInit() {
-    this.getAllRegions();
+    // this.getAllRegions();
     this.regions$ = this.regionsService.getAllRegions$();
    
   }
