@@ -1,9 +1,8 @@
-<p>regions-list works!</p>
 
 <mat-nav-list>
     <a
       mat-list-item
-      [routerLink]="['regions', regions.id]"
+      [routerLink]="[ region.code]"
       *ngFor="let region of regions"
     >
       Nombre {{ region.name }}
