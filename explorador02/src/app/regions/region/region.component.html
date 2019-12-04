@@ -6,4 +6,10 @@
 >   
 </app-region-card>
 
+ <app-countries-list
+  *ngIf="countries$ | async as countries"
+  [countries]="countries"
+  isAbsolute="-1"
+></app-countries-list> 
+
 <ng-template #empty>Loading...Regions</ng-template> 

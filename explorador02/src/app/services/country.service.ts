@@ -25,4 +25,10 @@ export class CountryService {
     return this.http.get<any>(url).pipe(map(date =>date[1][0]));
 
   }
+  getCountriesByRegionCode(regionCode: any){
+    const url = this.URL_COUNTRIES +this.PARAMETROS +"&region="+regionCode;
+    console.log(url);
+    return this.http.get<any[]>(url)
+    .pipe(map(data => data[1]));
+  }
 }

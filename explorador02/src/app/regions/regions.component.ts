@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RegionsService } from '../services/regions.service';
 import { Observable } from 'rxjs';
+import { CountryService } from '../services/country.service';
 
 @Component({
   selector: 'app-regions',
@@ -10,11 +11,13 @@ import { Observable } from 'rxjs';
 export class RegionsComponent implements OnInit {
 
   regions$: Observable<any[]> ;
+  country$: Observable<any[]> ;
   constructor(private regionsService: RegionsService) { }
 
   ngOnInit() {
     // this.getAllRegions();
     this.regions$ = this.regionsService.getAllRegions$();
+    
    
   }
 
