@@ -13,7 +13,9 @@ export class RegionsService {
 
 
   getAllRegions$() {
-    return this.http.get<any[]>(this.URL_REGIONS)
+    const url = this.URL_REGIONS;
+    console.log(url);
+    return this.http.get<any[]>(url)
     .pipe(map(data =>(data[1])));
   }
 

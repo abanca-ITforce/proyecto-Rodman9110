@@ -13,12 +13,16 @@ export class RegionsComponent implements OnInit {
   constructor(private regionsService: RegionsService) { }
 
   ngOnInit() {
-    this.regions$ =this.regionsService.getAllRegions$();
-    console.log(this.regions$);
+    this.getAllRegions();
+    this.regions$ = this.regionsService.getAllRegions$();
+   
   }
 
   getAllRegions(){
-    this.regionsService.getAllRegions$()
+    this.regionsService.getAllRegions$().subscribe(data=>{
+      this.regions$ = data;
+      console.log(data);
+    })
 
   }
 
