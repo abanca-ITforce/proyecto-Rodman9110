@@ -1,8 +1,18 @@
-<p>search works!</p>
+
 
 <app-filters
 [incomeLevel] = "incomeLevel$ | async "
 [leadingType] = "leadingType$ | async "
 [regions] = "regions$ | async "
+(search)="onSearch($event)"
 >
 </app-filters>
+
+  <!-- <app-result
+ [search]="search"
+ >
+</app-result>   -->
+
+<app-result  
+ >
+</app-result> 

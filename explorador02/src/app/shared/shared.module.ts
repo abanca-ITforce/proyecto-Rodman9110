@@ -7,6 +7,7 @@ import { RegionsListComponent } from './regions-list/regions-list.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -18,7 +19,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     RouterModule,
     MatSelectModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatCardModule
   ],
   exports: [CountriesListComponent, RegionsListComponent]
 })

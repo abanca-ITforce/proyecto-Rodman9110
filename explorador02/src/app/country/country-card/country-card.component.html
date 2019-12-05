@@ -1,8 +1,92 @@
 
+
+
 <mat-card class="example-card">
+<mat-card-header>
+  <div mat-card-avatar class="example-header-image">
+      <img class="flag" src="https://www.countryflags.io/{{ country.iso2Code }}/shiny/32.png">
+  </div>
+  <mat-card-title>{{country.name}}</mat-card-title>
+  <mat-card-subtitle>Capital city: {{country.capitalCity}}</mat-card-subtitle>
+  <mat-card-subtitle>Id: {{country.id}}</mat-card-subtitle>
+</mat-card-header>
+<hr>
+<mat-card-content>
+ <ul>
+   <li>iso2Code: {{country.iso2Code}}</li>
+   <li>Income Level: {{country.incomeLevel.value}}</li>
+   <li>Latitude: {{country.latitude}}</li>
+   <li>Longitude: {{country.longitude}}</li>
+ </ul>
+</mat-card-content>
+<mat-card-actions>
+</mat-card-actions>
+</mat-card>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <mat-card class="example-card">
     <mat-card-header>
       <mat-card-title>{{country.name}}</mat-card-title>
-      <mat-card-subtitle>Capital: {{country.capitalCity}}</mat-card-subtitle>
-      
+      <mat-card-subtitle>Capital: {{country.capitalCity}}</mat-card-subtitle>   
     </mat-card-header>
+    <mat-card-content>
+        <span><strong>iso2Code:</strong> {{ country.iso2Code }}</span><br>
+        <span><strong>Id:</strong> {{ country.id }}</span><br>
+        <span><strong>Income Level:</strong> {{ country.incomeLevel.value }}</span><br>
+        <span><strong>Capital city:</strong> {{ country.capitalCity }}</span><br>
+        <span><strong>Longitude:</strong> {{ country.longitude }}</span><br>
+        <span><strong>Latitude:</strong> {{ country.latitude }}</span><br>
+
+        <div *ngIf="extra$ | async as extra">
+          <h3>Extra information:</h3>
+          <span><strong>Population:</strong> {{ extra.population }}</span><br>
+          <span><strong>Interior Product:</strong> {{ extra.interiorProduct }}</span><br>
+        </div>
+      </mat-card-content>
   </mat-card>
+
+  <div >
+    <mat-card> {{ country.name }}</mat-card>
+    <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar>
+       
+            <img class="flag" src="https://www.countryflags.io/{{ country.iso2Code }}/shiny/32.png">
+          </div>
+          <mat-card-title>Name: {{ country.name }}</mat-card-title>
+          <mat-card-subtitle>Region: <a [routerLink]="['/regions', country.region.id]">{{ country.region.value }}</a></mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <span><strong>iso2Code:</strong> {{ country.iso2Code }}</span><br>
+          <span><strong>Id:</strong> {{ country.id }}</span><br>
+          <span><strong>Income Level:</strong> {{ country.incomeLevel.value }}</span><br>
+          <span><strong>Capital city:</strong> {{ country.capitalCity }}</span><br>
+          <span><strong>Longitude:</strong> {{ country.longitude }}</span><br>
+          <span><strong>Latitude:</strong> {{ country.latitude }}</span><br>
+
+          <div *ngIf="extra$ | async as extra">
+            <h3>Extra information:</h3>
+            <span><strong>Population:</strong> {{ extra.population }}</span><br>
+            <span><strong>Interior Product:</strong> {{ extra.interiorProduct }}</span><br>
+          </div>
+        </mat-card-content>
+      </mat-card>
+</div> -->

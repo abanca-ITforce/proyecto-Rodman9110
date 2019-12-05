@@ -2,7 +2,7 @@
 <p>{{incomeLevel.value}}</p> -->
 
 <mat-card>
-  <form>
+  
 <mat-form-field>
   <mat-label>Leading Type</mat-label>
   <mat-select [(value)]="selected">
@@ -19,7 +19,7 @@
 
 
 <mat-form-field>
-  <mat-label>Favorite food</mat-label>
+  <mat-label>Regions</mat-label>
   <mat-select>
     <mat-option *ngFor="let option of regions" [value]="option.name">
       {{option.name}}
@@ -27,6 +27,7 @@
   </mat-select>
 </mat-form-field>
   <br>
-<button mat-raised-button color="primary">Search</button>
-</form>
+<button mat-raised-button color="primary"  type="submit" (click)="onSubmit()">Search</button>
+<button mat-raised-button color="warn" type="button" (click)="onReset()">Warn</button>
+
 </mat-card>

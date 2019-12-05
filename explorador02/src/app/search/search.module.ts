@@ -10,6 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { FiltersComponent } from './filters/filters.component';
 import { ResultComponent } from './result/result.component';
 import {MatCardModule} from '@angular/material/card';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatListModule } from '@angular/material/list';
 
 
 
@@ -22,7 +24,10 @@ import {MatCardModule} from '@angular/material/card';
     MatSelectModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule,
+    MatListModule,
+    
   
   ]
 })
