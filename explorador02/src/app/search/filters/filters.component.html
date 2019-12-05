@@ -10,14 +10,14 @@
   <mat-label>Leading Type</mat-label>
   <!-- <mat-select [(value)]="selected"  formControlName="incomeLevel"> -->
     <mat-select  formControlName="incomeLevel">
-    <mat-option *ngFor="let option of incomeLevel"value="{{option.value}}">{{option.value}}</mat-option>
+    <mat-option *ngFor="let option of incomeLevel"value="{{option.id}}">{{option.value}}</mat-option>
   </mat-select>
 </mat-form-field>
 
 <mat-form-field>
   <mat-label>Leading Type</mat-label>
   <mat-select  formControlName="leadingType">
-    <mat-option *ngFor="let option of leadingType"value="{{option.value}}">{{option.value}}</mat-option>
+    <mat-option *ngFor="let option of leadingType"value="{{option.id}}">{{option.value}}</mat-option>
   </mat-select>
 </mat-form-field>
 
@@ -25,7 +25,7 @@
 <mat-form-field>
   <mat-label>Regions</mat-label>
   <mat-select  formControlName="regions">
-    <mat-option *ngFor="let option of regions" [value]="option.name">
+    <mat-option *ngFor="let option of regions" [value]="option.code">
         
       {{option.name}}
     </mat-option>

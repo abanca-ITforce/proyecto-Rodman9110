@@ -12,8 +12,8 @@ export class SearchService {
   URL_REGIONS ='https://api.worldbank.org/v2/region/?format=json'
 
   URL_SEARCH = 'https://api.worldbank.org/v2/country?lendingType=';
-  PARAMETRO_INCOMELEVEL='incomeLevel=';
-  PARAMETRO_REGION='incomeLevel='
+  PARAMETRO_INCOMELEVEL='&incomeLevel=';
+  PARAMETRO_REGION='&region='
   PARAMETRO_incomeLevel ='&incomeLevel=HIC&region=ECS&per_page=1000&format=json'
   PARAMETRO_FINAL ='&per_page=1000&format=json';
 
@@ -43,7 +43,10 @@ export class SearchService {
   }
 
   getSearchLendingType_LevelOptions_Regions$(lendingType,levelOptions,regions){
-    const url = this.URL_SEARCH+lendingType+this.PARAMETRO_INCOMELEVEL+levelOptions+this.URL_REGIONS+regions+this.PARAMETRO_FINAL;
+    console.log(regions);
+    const url = this.URL_SEARCH+lendingType+this.PARAMETRO_INCOMELEVEL+levelOptions+this.PARAMETRO_REGION+regions+this.PARAMETRO_FINAL;
+    // const url = this.URL_SEARCH+levelOptions+this.PARAMETRO_INCOMELEVEL+lendingType+this.PARAMETRO_REGION+regions+this.PARAMETRO_FINAL;
+
     console.log(url);
     return this.http.get<any[]>(url)
     .pipe(map(data => data[1]))

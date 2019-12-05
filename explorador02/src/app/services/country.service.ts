@@ -17,7 +17,17 @@ export class CountryService {
 
   getAllCountres$(){
     const url = this.URL_COUNTRIES + this.PARAMETROS;
-    return this.http.get<any[]>(url).pipe(map( data =>( data[1] )))
+     return this.http.get<any[]>(url).pipe(map( data =>( data[1] )))
+    // this.http.get<any[]>(url).pipe(map( data => {
+    //   let finalData  = [];
+    //   data[1].forEach(cur => {
+    //     if (cur.capitalCity) {
+    //       finalData.push(cur);
+    //     }
+    //   });
+    //   return finalData;
+    // } ))
+    
   }
   getCountry$(countryId){
     const url = this.URL_COUNTRY+countryId+this.PARAMETROS;

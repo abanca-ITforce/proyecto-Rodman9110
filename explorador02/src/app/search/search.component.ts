@@ -22,18 +22,20 @@ export class SearchComponent implements OnInit {
     
   }
 
-  onSearch(event: any){
+  Search(event: any){
 
     // this.serciceSearch.
-    console.log("tt "+event)
+    // console.log("tt "+event)
     
 
   }
 
 
-  getSearch(event){
+  getSearch(event: any){
 
-    // this.searchSercice.getSearchLendingType_LevelOptions_Regions$()
+    console.log(event);
+    console.log(event.incomeLevel);
+    this.searchSercice.getSearchLendingType_LevelOptions_Regions$(event.leadingType,event.incomeLevel,event.regions);
   }
 
 
