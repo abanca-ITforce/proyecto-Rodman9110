@@ -26,7 +26,7 @@ export class FiltersComponent implements OnInit {
 
   onSubmit(){
     this.search.emit(this.searchForm.value);
-    
+    console.log(this.search);
   }
   onReset(){
     this.searchForm.reset();

@@ -1,8 +1,11 @@
 <!-- <p>filters works!</p>
 <p>{{incomeLevel.value}}</p> -->
 
+
+
 <mat-card>
-  
+<form [formGroup]="searchForm" novalidate>
+
 <mat-form-field>
   <mat-label>Leading Type</mat-label>
   <mat-select [(value)]="selected">
@@ -29,5 +32,5 @@
   <br>
 <button mat-raised-button color="primary"  type="submit" (click)="onSubmit()">Search</button>
 <button mat-raised-button color="warn" type="button" (click)="onReset()">Warn</button>
-
+</form>
 </mat-card>

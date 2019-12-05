@@ -7,6 +7,8 @@ import { RegionCardComponent } from './region-card/region-card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from 'src/app/shared/shared.module';
+import {MatIconModule} from '@angular/material/icon';
+
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     RegionRoutingModule,
     MatCardModule,
     MatButtonModule,
-    SharedModule
+    SharedModule,
+    MatIconModule
 
   ]
 })
