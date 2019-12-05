@@ -11,6 +11,7 @@ export class SearchListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    
   }
 
 

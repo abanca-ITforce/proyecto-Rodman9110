@@ -13,6 +13,7 @@ export class SearchComponent implements OnInit {
   incomeLevel$: Observable<any[]>
   leadingType$: Observable<any[]>
   regions$: Observable<any[]>
+  countriesFilters$: Observable<any[]>;
   constructor(private searchSercice: SearchService, private formBuilder:FormBuilder) { }
 
   ngOnInit() {
@@ -32,10 +33,8 @@ export class SearchComponent implements OnInit {
 
 
   getSearch(event: any){
-
     console.log(event);
-    console.log(event.incomeLevel);
-    this.searchSercice.getSearchLendingType_LevelOptions_Regions$(event.leadingType,event.incomeLevel,event.regions);
+    this.countriesFilters$ = this.searchSercice.getSearchLendingType_LevelOptions_Regions$(event.leadingType,event.incomeLevel,event.regions);
   }
 
 

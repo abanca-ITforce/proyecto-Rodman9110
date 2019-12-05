@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CountriesListComponent implements OnInit {
 
-  @Input() countries: any[];
+  @Input() countries: any[] ;
   @Input() isAbsoluted = true;
   constructor() { }
 

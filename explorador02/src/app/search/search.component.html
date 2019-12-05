@@ -8,11 +8,15 @@
 >
 </app-filters>
 
-  <!-- <app-result
- [search]="search"
- >
-</app-result>   -->
+  
 
-<app-result  
+<!-- <app-result  
  >
-</app-result> 
+</app-result>  -->
+
+<app-countries-list 
+  *ngIf="countriesFilters$ | async as countries"
+  [countries]="countries"
+  >
+</app-countries-list>
+
