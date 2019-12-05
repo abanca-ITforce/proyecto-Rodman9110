@@ -6,6 +6,7 @@ import { CountryComponent } from './country.component';
 import { CountryCardComponent } from './country-card/country-card.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {MatButtonModule} from '@angular/material/button';
     CommonModule,
     CountryRoutingModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    SharedModule
   ]
 })
 export class CountryModule { }

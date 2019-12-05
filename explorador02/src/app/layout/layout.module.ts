@@ -8,7 +8,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { RouterModule } from '@angular/router';
-
+import { LoadingComponent } from '../shared/loading/loading.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -21,7 +22,8 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    RouterModule
+    RouterModule,
+    MatProgressSpinnerModule
    
   ],
   exports: [NavShellComponent]
