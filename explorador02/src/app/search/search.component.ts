@@ -13,20 +13,32 @@ export class SearchComponent implements OnInit {
   incomeLevel$: Observable<any[]>
   leadingType$: Observable<any[]>
   regions$: Observable<any[]>
-  constructor(private serciceSearch: SearchService, private formBuilder:FormBuilder) { }
+  constructor(private searchSercice: SearchService, private formBuilder:FormBuilder) { }
 
   ngOnInit() {
-    this.incomeLevel$ = this.serciceSearch.getSearchIncomeLevelOptions$();
-    this.leadingType$ = this.serciceSearch.getSearchLeadingType$();
-    this.regions$ = this.serciceSearch.getSearchRegions$();
+    this.incomeLevel$ = this.searchSercice.getSearchIncomeLevelOptions$();
+    this.leadingType$ = this.searchSercice.getSearchLeadingType$();
+    this.regions$ = this.searchSercice.getSearchRegions$();
     
   }
 
   onSearch(event: any){
 
     // this.serciceSearch.
+    console.log("tt "+event)
     
 
   }
+
+
+  getSearch(event){
+
+    // this.searchSercice.getSearchLendingType_LevelOptions_Regions$()
+  }
+
+
+
+
+
 
 }

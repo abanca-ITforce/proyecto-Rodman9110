@@ -11,10 +11,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { LoadingComponent } from './loading/loading.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { SearchListComponent } from './search-list/search-list.component';
 
 
 @NgModule({
-  declarations: [CountriesListComponent, RegionsListComponent,LoadingComponent],
+  declarations: [CountriesListComponent, RegionsListComponent,LoadingComponent, SearchListComponent],
   imports: [
     CommonModule,
     MatListModule,
@@ -27,6 +28,6 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatProgressBarModule
     
   ],
-  exports: [CountriesListComponent, RegionsListComponent,LoadingComponent]
+  exports: [CountriesListComponent, RegionsListComponent,LoadingComponent, SearchListComponent]
 })
 export class SharedModule { }

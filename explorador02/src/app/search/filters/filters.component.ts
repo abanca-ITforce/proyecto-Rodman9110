@@ -19,14 +19,18 @@ export class FiltersComponent implements OnInit {
   }
 
   searchForm = this.formBuilder.group({
-    incomeLevel: [null, []],
-    leadingType: [null, []],
-    regions: [null, []]
+    // incomeLevel: [null, []],
+    // leadingType: [null, []],
+    // regions: [null, []]
+    incomeLevel: [],
+    leadingType: [],
+    regions: []
   });
 
   onSubmit(){
+    console.log(this.searchForm.value)
     this.search.emit(this.searchForm.value);
-    console.log(this.search);
+   
   }
   onReset(){
     this.searchForm.reset();

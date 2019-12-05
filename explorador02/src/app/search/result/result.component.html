@@ -1,4 +1,16 @@
 <p>result works!!!</p>
+
+
+
 <div *ngIf="search">
-    <p>{{search.lenght}}</p>
+        <div *ngIf="search.length != 0; else zero">
+            {{search.length}}
+        </div>
+    <p></p>
 </div>
+
+
+<app-search-list
+[search]="search"
+></app-search-list>
+

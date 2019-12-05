@@ -5,32 +5,35 @@
 
 <mat-card>
 <form [formGroup]="searchForm" novalidate>
-
+<div class="searchForm">
 <mat-form-field>
   <mat-label>Leading Type</mat-label>
-  <mat-select [(value)]="selected">
-    <mat-option *ngFor="let option of incomeLevel"value="option.value">{{option.value}}</mat-option>
+  <!-- <mat-select [(value)]="selected"  formControlName="incomeLevel"> -->
+    <mat-select  formControlName="incomeLevel">
+    <mat-option *ngFor="let option of incomeLevel"value="{{option.value}}">{{option.value}}</mat-option>
   </mat-select>
 </mat-form-field>
 
 <mat-form-field>
   <mat-label>Leading Type</mat-label>
-  <mat-select [(value)]="selected">
-    <mat-option *ngFor="let option of leadingType"value="option.value">{{option.value}}</mat-option>
+  <mat-select  formControlName="leadingType">
+    <mat-option *ngFor="let option of leadingType"value="{{option.value}}">{{option.value}}</mat-option>
   </mat-select>
 </mat-form-field>
 
 
 <mat-form-field>
   <mat-label>Regions</mat-label>
-  <mat-select>
+  <mat-select  formControlName="regions">
     <mat-option *ngFor="let option of regions" [value]="option.name">
+        
       {{option.name}}
     </mat-option>
   </mat-select>
 </mat-form-field>
   <br>
 <button mat-raised-button color="primary"  type="submit" (click)="onSubmit()">Search</button>
-<button mat-raised-button color="warn" type="button" (click)="onReset()">Warn</button>
+<button mat-raised-button color="warn" type="button" (click)="onReset()">Reset</button>
+</div>
 </form>
 </mat-card>
